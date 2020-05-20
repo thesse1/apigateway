@@ -1,0 +1,33 @@
+{
+  "configId" : "HTTPSListener@5556",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "configURL" : "/WmRoot/configHTTP.dsp",
+    "maxQueue" : "200",
+    "listenerType" : "Regular",
+    "useJSSE" : "true",
+    "pkg" : "WmRoot",
+    "ssl" : "true",
+    "targets" : "0",
+    "enabled" : "true",
+    "protocol" : "HTTPS",
+    "provider" : "webMethods",
+    "alias" : "ssos",
+    "portAlias" : "HTTPS_Port",
+    "key" : "HTTPSListener@5556",
+    "uniqueID" : "98bd71c02ce14bf4a46a71fcdd900942",
+    "curDelay" : "0",
+    "keepAliveTimeout" : "20000",
+    "listenerKey" : "HTTPSListener@5556",
+    "portDescription" : "Integration Server HTTPS port: 5556",
+    "internalPort" : "-1",
+    "suspended" : "false",
+    "port" : 5556,
+    "factoryKey" : "webMethods/HTTP",
+    "keyStore" : "DEFAULT_IS_KEYSTORE",
+    "trustStore" : "DEFAULT_IS_TRUSTSTORE",
+    "clientAuth" : "none",
+    "stepsize" : "10000"
+  }
+}

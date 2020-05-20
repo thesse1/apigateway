@@ -1,0 +1,10 @@
+{
+  "configId" : "loadBalancer",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "websocketUrls" : [ ],
+    "httpsUrls" : [ ],
+    "httpUrls" : [ ]
+  }
+}

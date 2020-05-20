@@ -1,0 +1,17 @@
+{
+  "id" : "5b8b220c-1bc2-4464-a6cb-3b623d6ab234",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "https://services.odata.org/V2/Northwind/Northwind.svc/${sys:resource_path}" ]
+  } ],
+  "active" : false
+}

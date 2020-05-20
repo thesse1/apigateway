@@ -1,0 +1,108 @@
+{
+  "apiDefinition" : {
+    "wsdl" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:tns=\"http://thomas-bayer.com/blz/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" targetNamespace=\"http://thomas-bayer.com/blz/\">\n    <wsdl:documentation>BLZService</wsdl:documentation>\n    <wsdl:types>\n        <xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://thomas-bayer.com/blz/\">\n            <xsd:element name=\"getBank\" type=\"tns:getBankType\"/>\n            <xsd:element name=\"getBankResponse\" type=\"tns:getBankResponseType\"/>\n            <xsd:complexType name=\"getBankType\">\n                <xsd:sequence>\n                    <xsd:element name=\"blz\" type=\"xsd:string\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n            <xsd:complexType name=\"getBankResponseType\">\n                <xsd:sequence>\n                    <xsd:element name=\"details\" type=\"tns:detailsType\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n            <xsd:complexType name=\"detailsType\">\n                <xsd:sequence>\n                    <xsd:element minOccurs=\"0\" name=\"bezeichnung\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"bic\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"ort\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"plz\" type=\"xsd:string\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n        </xsd:schema>\n    </wsdl:types>\n    <wsdl:message name=\"getBank\">\n        <wsdl:part name=\"parameters\" element=\"tns:getBank\"/>\n    </wsdl:message>\n    <wsdl:message name=\"getBankResponse\">\n        <wsdl:part name=\"parameters\" element=\"tns:getBankResponse\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"BLZServicePortType\">\n        <wsdl:operation name=\"getBank\">\n            <wsdl:input message=\"tns:getBank\"/>\n            <wsdl:output message=\"tns:getBankResponse\" wsaw:Action=\"http://thomas-bayer.com/blz/BLZService/getBankResponse\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"BLZServiceSOAP11Binding\" type=\"tns:BLZServicePortType\">\n        <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n        <wsdl:operation name=\"getBank\">\n            <soap:operation style=\"document\" soapAction=\"\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"BLZServiceSOAP12Binding\" type=\"tns:BLZServicePortType\">\n        <soap12:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n        <wsdl:operation name=\"getBank\">\n            <soap12:operation style=\"document\" soapAction=\"\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"BLZService\">\n        <wsdl:port name=\"BLZServiceSOAP11port_http\" binding=\"tns:BLZServiceSOAP11Binding\">\n            <soap:address location=\"http://www.thomas-bayer.com/axis2/services/BLZService\"/>\n        </wsdl:port>\n        <wsdl:port name=\"BLZServiceSOAP12port_http\" binding=\"tns:BLZServiceSOAP12Binding\">\n            <soap12:address location=\"http://www.thomas-bayer.com/axis2/services/BLZService\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>\n",
+    "baseWsdlUri" : "/webmethods/wm10.5/IntegrationServer/instances/default/temp/1589994718805/",
+    "nativeUri" : [ "http://www.thomas-bayer.com/axis2/services/BLZService" ],
+    "serviceName" : "BLZService",
+    "operationsInfo" : [ {
+      "name" : "getBank",
+      "namespace" : "http://thomas-bayer.com/blz/",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "BLZServiceSOAP11Binding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<blz:getBank xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:blz>string</blz:blz>\n</blz:getBank>",
+        "outputMessage" : "<blz:getBankResponse xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:details>\n    <!--Optional:-->\n    <blz:bezeichnung>string</blz:bezeichnung>\n    <!--Optional:-->\n    <blz:bic>string</blz:bic>\n    <!--Optional:-->\n    <blz:ort>string</blz:ort>\n    <!--Optional:-->\n    <blz:plz>string</blz:plz>\n  </blz:details>\n</blz:getBankResponse>"
+      }, {
+        "name" : "BLZServiceSOAP12Binding",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<blz:getBank xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:blz>string</blz:blz>\n</blz:getBank>",
+        "outputMessage" : "<blz:getBankResponse xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:details>\n    <!--Optional:-->\n    <blz:bezeichnung>string</blz:bezeichnung>\n    <!--Optional:-->\n    <blz:bic>string</blz:bic>\n    <!--Optional:-->\n    <blz:ort>string</blz:ort>\n    <!--Optional:-->\n    <blz:plz>string</blz:plz>\n  </blz:details>\n</blz:getBankResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : { },
+                  "examples" : { },
+                  "example" : "<blz:getBankResponse xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:details>\n    <!--Optional:-->\n    <blz:bezeichnung>string</blz:bezeichnung>\n    <!--Optional:-->\n    <blz:bic>string</blz:bic>\n    <!--Optional:-->\n    <blz:ort>string</blz:ort>\n    <!--Optional:-->\n    <blz:plz>string</blz:plz>\n  </blz:details>\n</blz:getBankResponse>"
+                },
+                "application/json" : {
+                  "schema" : { },
+                  "examples" : { },
+                  "example" : "{\"getBankResponse\":{\"details\":{\"bezeichnung\":\"string\",\"bic\":\"string\",\"ort\":\"string\",\"plz\":\"string\"}}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<blz:getBank xmlns:blz=\"http://thomas-bayer.com/blz/\">\n  <blz:blz>string</blz:blz>\n</blz:getBank>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"getBank\":{\"blz\":\"string\"}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "getBank",
+        "invokePath" : "/getBank"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    } ],
+    "type" : "soap",
+    "serviceRegistryDisplayName" : "BLZService_1",
+    "operationPolicies" : {
+      "getBank" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://www.thomas-bayer.com/axis2/services/BLZService",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "BLZService",
+  "apiVersion" : "1",
+  "apiDescription" : "Service for retrieving BLZ data for banks",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "e92e13ec-1547-4103-81d4-83c853360b90" ],
+  "referencedFiles" : {
+    "BLZService.wsdl" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:tns=\"http://thomas-bayer.com/blz/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" targetNamespace=\"http://thomas-bayer.com/blz/\">\n    <wsdl:documentation>BLZService</wsdl:documentation>\n    <wsdl:types>\n        <xsd:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://thomas-bayer.com/blz/\">\n            <xsd:element name=\"getBank\" type=\"tns:getBankType\"/>\n            <xsd:element name=\"getBankResponse\" type=\"tns:getBankResponseType\"/>\n            <xsd:complexType name=\"getBankType\">\n                <xsd:sequence>\n                    <xsd:element name=\"blz\" type=\"xsd:string\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n            <xsd:complexType name=\"getBankResponseType\">\n                <xsd:sequence>\n                    <xsd:element name=\"details\" type=\"tns:detailsType\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n            <xsd:complexType name=\"detailsType\">\n                <xsd:sequence>\n                    <xsd:element minOccurs=\"0\" name=\"bezeichnung\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"bic\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"ort\" type=\"xsd:string\"/>\n                    <xsd:element minOccurs=\"0\" name=\"plz\" type=\"xsd:string\"/>\n                </xsd:sequence>\n            </xsd:complexType>\n        </xsd:schema>\n    </wsdl:types>\n    <wsdl:message name=\"getBank\">\n        <wsdl:part name=\"parameters\" element=\"tns:getBank\"/>\n    </wsdl:message>\n    <wsdl:message name=\"getBankResponse\">\n        <wsdl:part name=\"parameters\" element=\"tns:getBankResponse\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"BLZServicePortType\">\n        <wsdl:operation name=\"getBank\">\n            <wsdl:input message=\"tns:getBank\"/>\n            <wsdl:output message=\"tns:getBankResponse\" wsaw:Action=\"http://thomas-bayer.com/blz/BLZService/getBankResponse\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"BLZServiceSOAP11Binding\" type=\"tns:BLZServicePortType\">\n        <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n        <wsdl:operation name=\"getBank\">\n            <soap:operation style=\"document\" soapAction=\"\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"BLZServiceSOAP12Binding\" type=\"tns:BLZServicePortType\">\n        <soap12:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n        <wsdl:operation name=\"getBank\">\n            <soap12:operation style=\"document\" soapAction=\"\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"BLZService\">\n        <wsdl:port name=\"BLZServiceSOAP11port_http\" binding=\"tns:BLZServiceSOAP11Binding\">\n            <soap:address location=\"http://www.thomas-bayer.com/axis2/services/BLZService\"/>\n        </wsdl:port>\n        <wsdl:port name=\"BLZServiceSOAP12port_http\" binding=\"tns:BLZServiceSOAP12Binding\">\n            <soap12:address location=\"http://www.thomas-bayer.com/axis2/services/BLZService\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-20 07:33:21 GMT",
+  "lastModified" : "2020-05-20 17:11:58 GMT",
+  "systemVersion" : 1,
+  "id" : "1936db18-a9f0-4d49-99cc-d35b3a7266ba"
+}

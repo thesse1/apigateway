@@ -1,0 +1,28 @@
+{
+  "id" : "local",
+  "name" : "local",
+  "description" : "API Gateway as an Authorization server.",
+  "type" : "authServerAlias",
+  "owner" : "Administrator",
+  "localIntrospectionConfig" : {
+    "issuer" : "Software GmbH Austria"
+  },
+  "tokenGeneratorConfig" : {
+    "audience" : "PS API Gateway Training",
+    "expiry" : 10,
+    "algorithm" : "RS512",
+    "accessTokenExpInterval" : 3600,
+    "authCodeExpInterval" : 600
+  },
+  "sslConfig" : {
+    "keyStoreAlias" : "DEFAULT_IS_KEYSTORE",
+    "keyAlias" : "ssos"
+  },
+  "metadata" : { },
+  "scopes" : [ {
+    "name" : "demoscope",
+    "description" : "Demo Scope"
+  } ],
+  "supportedGrantTypes" : [ "authorization_code", "password", "client_credentials", "refresh_token", "implicit" ],
+  "authServerType" : "LOCAL_IS"
+}

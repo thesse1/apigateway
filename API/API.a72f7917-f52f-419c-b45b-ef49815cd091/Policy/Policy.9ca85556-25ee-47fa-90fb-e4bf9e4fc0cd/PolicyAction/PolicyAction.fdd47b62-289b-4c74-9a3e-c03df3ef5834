@@ -1,0 +1,22 @@
+{
+  "id" : "fdd47b62-289b-4c74-9a3e-c03df3ef5834",
+  "names" : [ {
+    "value" : "Outbound Authentication - Transport",
+    "locale" : "en"
+  } ],
+  "templateKey" : "outboundTransportAuthentication",
+  "parameters" : [ {
+    "templateKey" : "transportSecurity",
+    "parameters" : [ {
+      "templateKey" : "authType",
+      "values" : [ "ALIAS" ]
+    }, {
+      "templateKey" : "authMode",
+      "values" : [ "NEW" ]
+    }, {
+      "templateKey" : "alias",
+      "values" : [ "${IS_DEV_Alias}" ]
+    } ]
+  } ],
+  "active" : false
+}

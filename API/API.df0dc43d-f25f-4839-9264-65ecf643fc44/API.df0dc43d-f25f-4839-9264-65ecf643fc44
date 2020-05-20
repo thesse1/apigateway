@@ -1,0 +1,68 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "PostmanEcho"
+    },
+    "serviceRegistryDisplayName" : "PostmanEcho_1.0",
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/get" : {
+        "get" : {
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "get",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "https://postman-echo.com",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "https://postman-echo.com",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "PostmanEcho",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "4c5efc4a-c3ce-4c2a-a441-8a549d6c74a1" ],
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-20 14:58:44 GMT",
+  "lastModified" : "2020-05-20 14:59:07 GMT",
+  "systemVersion" : 1,
+  "id" : "df0dc43d-f25f-4839-9264-65ecf643fc44"
+}

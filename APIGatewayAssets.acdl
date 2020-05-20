@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.5" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2020-05-20T19:25:23"/>
+    <asset name="UrlAlias.health" displayName="health" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="Group.API-Gateway-Administrators" displayName="API-Gateway-Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+        <dependsOn>APIGateway:User.Administrator</dependsOn>
+    </asset>
+    <asset name="User.Administrator" displayName="Administrator" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="PolicyAction.94371409-8611-4fbb-a92f-614108783fca" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API PostmanEcho[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="ApprovalConfiguration.registerApplication" displayName="registerApplication" isDeployable="true">
+        <implementation.generic type="ApprovalConfiguration"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+    </asset>
+    <asset name="AccessProfile.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.Administrators</dependsOn>
+    </asset>
+    <asset name="Group.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="AdministratorSetting.centraSiteDestinationSNMPConfig" displayName="Centrasite SNMP" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:PassmanData.gateway.destination.snmp.authpwd.handle</dependsOn>
+        <dependsOn>APIGateway:PassmanData.gateway.destination.snmp.privacepwd.handle</dependsOn>
+    </asset>
+    <asset name="PassmanData.gateway.destination.snmp.authpwd.handle" displayName="gateway.destination.snmp.authpwd.handle" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.gateway.destination.snmp.privacepwd.handle" displayName="gateway.destination.snmp.privacepwd.handle" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Alias.PingFederate" displayName="PingFederate" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
+    </asset>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.51d69a86-2745-4c71-8c4d-49410690cd7c" displayName="AccessControlList for asset : PingGW_API_App" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AccessProfile.Default" displayName="Default" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.Everybody</dependsOn>
+    </asset>
+    <asset name="Group.Everybody" displayName="Everybody" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="Alias.local" displayName="local" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+    </asset>
+    <asset name="Keystore.DEFAULT_IS_KEYSTORE" displayName="DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="Keystore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Policy.7e7b4d9a-e084-4ff9-93b3-30b9b6e41c0a" displayName="Policy For API Petstore[1.0.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.29b70cc4-920a-473e-a356-63acd7d86263</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.8f6efafd-d0a7-4ef5-a121-998fd204c2cf</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.a992a091-2792-4c35-86a8-5c81428dcade</dependsOn>
+    </asset>
+    <asset name="PolicyAction.8f6efafd-d0a7-4ef5-a121-998fd204c2cf" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API Petstore[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.29b70cc4-920a-473e-a356-63acd7d86263" displayName="Policy Action [Custom Extension] -&gt; Policy For API Petstore[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.a992a091-2792-4c35-86a8-5c81428dcade" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API Petstore[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.ebdb4ff0-08a9-45e5-80b5-247681910f8c" displayName="WebSocketDemo[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.e303c06c-4379-4b01-b477-21db3001198c</dependsOn>
+    </asset>
+    <asset name="Policy.e303c06c-4379-4b01-b477-21db3001198c" displayName="Policy For API WebSocketDemo[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.12597553-65b2-4a22-a736-7c571474d041</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.6393c042-5660-4a20-b9cc-78f2b4d53682</dependsOn>
+    </asset>
+    <asset name="PolicyAction.12597553-65b2-4a22-a736-7c571474d041" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API WebSocketDemo[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.6393c042-5660-4a20-b9cc-78f2b4d53682" displayName="Policy Action [Log Invocation] -&gt; Policy For API WebSocketDemo[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Truststore.DEFAULT_IS_TRUSTSTORE" displayName="DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="Truststore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE" displayName="wm.security.keystore.DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AccessControlList.2673d2d9-f2e5-4557-a148-276388c651f0" displayName="AccessControlList for asset : PostmanEcho" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="API.cfa3a737-449e-4367-bbd2-7904045a1967" displayName="Northwind.svc[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.a9857d4f-ac84-4ffa-9e82-812d4a50dff6</dependsOn>
+    </asset>
+    <asset name="Policy.a9857d4f-ac84-4ffa-9e82-812d4a50dff6" displayName="Policy For API Northwind.svc[1]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.5b8b220c-1bc2-4464-a6cb-3b623d6ab234</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d7f16937-0670-4ea6-b681-39694ae34d73</dependsOn>
+    </asset>
+    <asset name="PolicyAction.d7f16937-0670-4ea6-b681-39694ae34d73" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API Northwind.svc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.5b8b220c-1bc2-4464-a6cb-3b623d6ab234" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API Northwind.svc[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.logConfig" displayName="logConfig" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.centraSiteDestinationEventsConfig" displayName="Centrasite Events" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.1936db18-a9f0-4d49-99cc-d35b3a7266ba" displayName="BLZService[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.e92e13ec-1547-4103-81d4-83c853360b90</dependsOn>
+    </asset>
+    <asset name="Policy.e92e13ec-1547-4103-81d4-83c853360b90" displayName="Policy For API BLZService[1]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.c3b847f5-a097-404f-9ff3-93f4db8fc1ca</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f1a53a1b-a459-422b-8b3e-9ac55ed0fa47</dependsOn>
+    </asset>
+    <asset name="PolicyAction.f1a53a1b-a459-422b-8b3e-9ac55ed0fa47" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API BLZService[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.c3b847f5-a097-404f-9ff3-93f4db8fc1ca" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API BLZService[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.centraSiteDestinationCommunicationConfig" displayName="Centrasite Communication" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:PassmanData.gateway.destination.cs.handle</dependsOn>
+    </asset>
+    <asset name="PassmanData.gateway.destination.cs.handle" displayName="gateway.destination.cs.handle" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="ProxyBypass.proxyBypass" displayName="proxyBypass" isDeployable="true">
+        <implementation.generic type="ProxyBypass"/>
+    </asset>
+    <asset name="GatewayScope.2a8e62c7-87b6-4886-b999-e6987297bdcf" displayName="local:demoscope" isDeployable="true">
+        <implementation.generic type="GatewayScope"/>
+    </asset>
+    <asset name="AccessProfile.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.API-Gateway-Providers</dependsOn>
+    </asset>
+    <asset name="Group.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5556" displayName="HTTPSListener@5556" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:Truststore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER" displayName="DEFAULT_IS_JNDI_PROVIDER" isDeployable="true">
+        <implementation.generic type="JndiProviderAlias"/>
+    </asset>
+    <asset name="AccessControlList.9abc00ba-2944-4c2a-8338-4b93498f1889" displayName="AccessControlList for asset : BLZService" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Alias.OKTA" displayName="OKTA" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AdministratorSetting.WebSocketListener@5557" displayName="WebSocketListener@5557" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AccessControlList.bdb757af-6447-4a03-8ac3-dfde6d8939d0" displayName="AccessControlList for asset : WebSocketDemo" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@9999" displayName="HTTPListener@9999" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="JmsConnectionAlias.PE_NONTRANSACTIONAL_ALIAS" displayName="PE_NONTRANSACTIONAL_ALIAS" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+    <asset name="AccessControlList.855d107d-7496-49a5-8132-334e3edc29f9" displayName="AccessControlList for asset : Northwind.svc" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Alias.EurekaDefault" displayName="EurekaDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@5555" displayName="HTTPListener@5555" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.loadBalancer" displayName="Load balancer" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.014a3166-0c3f-46a6-9de0-d781d3270aec" displayName="Petstore[1.0.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.7e7b4d9a-e084-4ff9-93b3-30b9b6e41c0a</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.whiteListingIPs" displayName="whiteListingIPs" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.74ae50e9-2646-43a4-be52-51d5cceff64a" displayName="Identify &amp; Authorize Application" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.gatewayDestinationConfig" displayName="API Gateway" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.2ab87704-ead7-4e60-b409-42327a572153" displayName="Identify &amp; Authorize Application" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Alias.ServiceConsulDefault" displayName="ServiceConsulDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <dependsOn>APIGateway:PassmanData.SVC_REGISTRY_BASIC_AUTH_SECRETServiceConsulDefault</dependsOn>
+    </asset>
+    <asset name="PassmanData.SVC_REGISTRY_BASIC_AUTH_SECRETServiceConsulDefault" displayName="SVC_REGISTRY_BASIC_AUTH_SECRETServiceConsulDefault" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="API.df0dc43d-f25f-4839-9264-65ecf643fc44" displayName="PostmanEcho[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.4c5efc4a-c3ce-4c2a-a441-8a549d6c74a1</dependsOn>
+    </asset>
+    <asset name="Policy.4c5efc4a-c3ce-4c2a-a441-8a549d6c74a1" displayName="Policy For API PostmanEcho[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.64791a19-7cfd-4efd-b866-2ea77d439669</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.94371409-8611-4fbb-a92f-614108783fca</dependsOn>
+    </asset>
+    <asset name="PolicyAction.64791a19-7cfd-4efd-b866-2ea77d439669" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API PostmanEcho[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.7a39c944-6f76-4e2e-844a-3f2591eb58a0" displayName="IS_DEV_Alias" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <dependsOn>APIGateway:PassmanData.HTTP_AUTH_OUTBOUND_CLIENT_PWDIS_DEV_Alias</dependsOn>
+        <property name="Username for HTTP Transport Security Alias IS_DEV_Alias" many="false" isSecure="false" displayName="Username for HTTP Transport Security Alias IS_DEV_Alias">
+            <value>Administrator</value>
+        </property>
+        <property name="Password for HTTP Transport Security Alias IS_DEV_Alias" many="false" isSecure="true" displayName="Password for HTTP Transport Security Alias IS_DEV_Alias">
+            <value>{AES}vDt83fIfdPbOEh8vBitePrw7fN3yH3T2zhIfLwYrXj5pitcLjd1NawNQdFYbmaFM</value>
+        </property>
+    </asset>
+    <asset name="PassmanData.HTTP_AUTH_OUTBOUND_CLIENT_PWDIS_DEV_Alias" displayName="HTTP_AUTH_OUTBOUND_CLIENT_PWDIS_DEV_Alias" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPGlobalIPAccessMode" displayName="HTTPGlobalIPAccessMode" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="UrlAlias.metrics" displayName="metrics" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="AccessControlList.1403d430-294f-4a8d-a20c-38d5fcd917a4" displayName="AccessControlList for asset : Petstore" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="JmsConnectionAlias.DEFAULT_IS_JMS_CONNECTION" displayName="DEFAULT_IS_JMS_CONNECTION" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.errorProcessing" displayName="Service fault" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Application.157e6887-38f3-4645-9a3d-3fa869e44469" displayName="PingGW_API_App" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY157e6887-38f3-4645-9a3d-3fa869e44469</dependsOn>
+        <dependsOn>APIGateway:RegisteredApplication.157e6887-38f3-4645-9a3d-3fa869e44469</dependsOn>
+        <dependsOn>APIGateway:Strategy.12922f1c-f1ad-4353-ad48-2bd8fef6a2c7</dependsOn>
+    </asset>
+    <asset name="PassmanData.API_ACCESS_KEY157e6887-38f3-4645-9a3d-3fa869e44469" displayName="API_ACCESS_KEY157e6887-38f3-4645-9a3d-3fa869e44469" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Strategy.12922f1c-f1ad-4353-ad48-2bd8fef6a2c7" displayName="PingGW_API_App2da8c002-9336-4811-8113-c913532ebf16-$sys-default-oauth" isDeployable="true">
+        <implementation.generic type="Strategy"/>
+        <dependsOn>APIGateway:PassmanData.fdc05107-429c-419b-9ee3-e670aa675303-clientSecret</dependsOn>
+    </asset>
+    <asset name="PassmanData.fdc05107-429c-419b-9ee3-e670aa675303-clientSecret" displayName="fdc05107-429c-419b-9ee3-e670aa675303-clientSecret" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="RegisteredApplication.157e6887-38f3-4645-9a3d-3fa869e44469" displayName="RegisteredApplication [ PingGW_API_App ]" isDeployable="true">
+        <implementation.generic type="RegisteredApplication"/>
+    </asset>
+    <asset name="PortalGateway.cc6ffd20-b588-4b47-a716-af5686ece6c1" displayName="API_Portal" isDeployable="true">
+        <implementation.generic type="PortalGateway"/>
+        <dependsOn>APIGateway:PassmanData.cc6ffd20-b588-4b47-a716-af5686ece6c1APIPORTAL</dependsOn>
+        <dependsOn>APIGateway:PassmanData.cc6ffd20-b588-4b47-a716-af5686ece6c1GATEWAY</dependsOn>
+    </asset>
+    <asset name="PassmanData.cc6ffd20-b588-4b47-a716-af5686ece6c1GATEWAY" displayName="cc6ffd20-b588-4b47-a716-af5686ece6c1GATEWAY" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.cc6ffd20-b588-4b47-a716-af5686ece6c1APIPORTAL" displayName="cc6ffd20-b588-4b47-a716-af5686ece6c1APIPORTAL" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+</asset_composite>

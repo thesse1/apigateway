@@ -1,0 +1,16 @@
+{
+  "configId" : "centraSiteDestinationSNMPConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "hostName" : "wm105",
+    "authorizationPassword" : "********************************",
+    "port" : "8181",
+    "authorizationProtocol" : "MD5",
+    "sendTRAPsToCentrasite" : "true",
+    "transport" : "TCP",
+    "userName" : "sagSecurityName",
+    "privacyPassword" : "********************************",
+    "privacyProtocol" : "DES"
+  }
+}

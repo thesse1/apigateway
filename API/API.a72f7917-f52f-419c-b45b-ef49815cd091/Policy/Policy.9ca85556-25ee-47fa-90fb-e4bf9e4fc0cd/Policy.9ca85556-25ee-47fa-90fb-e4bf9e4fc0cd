@@ -1,0 +1,46 @@
+{
+  "id" : "9ca85556-25ee-47fa-90fb-e4bf9e4fc0cd",
+  "names" : [ {
+    "value" : "Default Policy for API PingGW_API",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "01916f20-004e-4dd2-a18a-827600e23113",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "fdd47b62-289b-4c74-9a3e-c03df3ef5834",
+      "order" : "1"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "207c22a4-09d2-40e1-9e09-5facccd5462e",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "ae70f60d-a6e8-4acc-ab78-ce9de4e47251",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1814516d-f028-40d8-9cc4-9da209ab1c50",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "systemPolicy" : false,
+  "global" : false
+}

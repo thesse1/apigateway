@@ -1,0 +1,26 @@
+{
+  "id" : "a9857d4f-ac84-4ffa-9e82-812d4a50dff6",
+  "names" : [ {
+    "value" : "Default Policy for API Northwind.svc",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "d7f16937-0670-4ea6-b681-39694ae34d73"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "5b8b220c-1bc2-4464-a6cb-3b623d6ab234"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "systemPolicy" : false,
+  "global" : false
+}

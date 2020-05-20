@@ -1,0 +1,11 @@
+{
+  "id" : "2a8e62c7-87b6-4886-b999-e6987297bdcf",
+  "scopeName" : "local:demoscope",
+  "scopeDescription" : "Demo Scope",
+  "audience" : "",
+  "apiScopes" : [ ],
+  "requiredAuthScopes" : [ {
+    "authServerAlias" : "local",
+    "scopeName" : "demoscope"
+  } ]
+}

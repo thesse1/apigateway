@@ -1,0 +1,18 @@
+{
+  "id" : "cc6ffd20-b588-4b47-a716-af5686ece6c1",
+  "gatewayName" : "API_Portal",
+  "gatewayUsername" : "Administrator",
+  "gatewayPassword" : "********************************",
+  "gatewayURL" : "http://wm105:5555",
+  "refId" : "304a4bb1-32bb-11ea-6cdc-000c29065cda",
+  "externalPortal" : {
+    "endpointTenant" : "default",
+    "endpointURL" : "http://wm105:18101",
+    "endpointUsername" : "apiadmin",
+    "endpointPassword" : "********************************",
+    "type" : "apiportal"
+  },
+  "version" : "10.5",
+  "stageName" : "Development",
+  "published" : true
+}

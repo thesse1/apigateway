@@ -1,0 +1,31 @@
+{
+  "id" : "e92e13ec-1547-4103-81d4-83c853360b90",
+  "names" : [ {
+    "value" : "Default Policy for API BLZService",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f1a53a1b-a459-422b-8b3e-9ac55ed0fa47",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c3b847f5-a097-404f-9ff3-93f4db8fc1ca",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "systemPolicy" : false,
+  "global" : false
+}

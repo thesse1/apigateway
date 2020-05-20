@@ -1,0 +1,28 @@
+{
+  "apiDefinition" : {
+    "type" : "websocket",
+    "nativeUri" : [ "ws://echo.websocket.org" ],
+    "messages" : [ ],
+    "parameters" : { },
+    "uri" : [ "ws://echo.websocket.org" ]
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "ws://echo.websocket.org",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "WebSocketDemo",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "WEBSOCKET",
+  "owner" : "Administrator",
+  "policies" : [ "e303c06c-4379-4b01-b477-21db3001198c" ],
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-20 07:57:14 GMT",
+  "lastModified" : "2020-05-20 08:00:37 GMT",
+  "systemVersion" : 1,
+  "id" : "ebdb4ff0-08a9-45e5-80b5-247681910f8c"
+}

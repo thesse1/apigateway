@@ -1,0 +1,25 @@
+{
+  "id" : "registerApplication",
+  "eventType" : "registerApplication",
+  "isEnabled" : true,
+  "approversGroupId" : "Administrators",
+  "approvalMode" : "anyone",
+  "approvedEmailConfiguration" : {
+    "emailSubject" : "Approval of @event.type",
+    "emailContent" : "Congratulations @requestor.name !\n\nYour request for @event.type has been approved.\n\n *** This notification was sent automatically. Do not reply to this email.***",
+    "enabled" : false,
+    "requestType" : "approved"
+  },
+  "rejectedEmailConfiguration" : {
+    "emailSubject" : "Rejection of @event.type",
+    "emailContent" : "Hello @requestor.name,\n\nYour @event.type  request has been rejected.\nReasons:@rejectionReason.\n\nBest Regards,\nAPI Gateway Team\n\n*** This notification was sent automatically. Do not reply to this email.***",
+    "enabled" : false,
+    "requestType" : "rejected"
+  },
+  "initiateApprovalRequestEmailConfiguration" : {
+    "emailSubject" : "Approval request pending",
+    "emailContent" : "Hello @approver.name,\n\n A request by @requestor.name to @event.type needs your review and approval.\n\nBest Regards,\nAPI Gateway Team\n\n*** This notification was sent automatically. Do not reply to this email.***",
+    "enabled" : false,
+    "requestType" : "initiate"
+  }
+}

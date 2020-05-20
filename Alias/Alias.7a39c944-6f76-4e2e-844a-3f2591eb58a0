@@ -1,0 +1,13 @@
+{
+  "id" : "7a39c944-6f76-4e2e-844a-3f2591eb58a0",
+  "name" : "IS_DEV_Alias",
+  "type" : "httpTransportSecurityAlias",
+  "stage" : "",
+  "owner" : "Administrator",
+  "authType" : "HTTP_BASIC",
+  "authMode" : "NEW",
+  "httpAuthCredentials" : {
+    "userName" : "Administrator",
+    "password" : "KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKio="
+  }
+}

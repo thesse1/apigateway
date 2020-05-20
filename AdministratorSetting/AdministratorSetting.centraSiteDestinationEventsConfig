@@ -1,0 +1,12 @@
+{
+  "configId" : "centraSiteDestinationEventsConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "sendLifecycleEvent" : "false",
+    "sendErrorEvent" : "false",
+    "sendPolicyViolationEvent" : "false",
+    "sendPerformanceMetrics" : "false",
+    "metricsPublishInterval" : "5"
+  }
+}

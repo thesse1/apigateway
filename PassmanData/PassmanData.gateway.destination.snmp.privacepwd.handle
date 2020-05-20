@@ -1,0 +1,7 @@
+{
+  "id" : "gateway.destination.snmp.privacepwd.handle",
+  "pw" : "pgEswhhV5wIQwYN1BdQUyfq4t2F4qgn8",
+  "encryptorId" : "EntrustPbePlus",
+  "saltString" : "3NZCCeTbAvv9f5pJZZ5QPw==",
+  "iterationCount" : 2048
+}

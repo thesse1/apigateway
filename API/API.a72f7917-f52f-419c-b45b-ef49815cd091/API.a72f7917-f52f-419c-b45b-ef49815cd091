@@ -1,0 +1,105 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "description" : "Ping API",
+      "version" : "1.0",
+      "title" : "PingAPI"
+    },
+    "serviceRegistryDisplayName" : "PingGW_API_1.0",
+    "schemes" : [ ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/Ping/ping" : {
+        "get" : {
+          "operationId" : "Pingping_GET_1",
+          "responses" : {
+            "200" : {
+              "description" : "Successful",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/Pingping_GET_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "Pingping_GET_1"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/Ping/ping",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://localhost:5555/restv2",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : {
+        "Pingping_GET_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"date\",\"message\"],\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"}}}"
+        }
+      },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://localhost:5555/restv2",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "PingGW_API",
+  "apiVersion" : "1.0",
+  "apiDescription" : "Ping Demo API created in API-GW\n",
+  "maturityState" : "Beta",
+  "isActive" : false,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "9ca85556-25ee-47fa-90fb-e4bf9e4fc0cd" ],
+  "referencedFiles" : {
+    "Swagger_Ping.json" : "{\n  \"swagger\": \"2.0\",\n  \"info\": {\n    \"description\": \"Ping API\",\n    \"version\": \"1.0\",\n    \"title\": \"PingAPI\"\n  },\n  \"host\": \"localhost:5555\",\n  \"basePath\": \"/restv2\",\n  \"schemes\": [\n    \"http\"\n  ],\n  \"consumes\": [\n    \"application/json\"\n  ],\n  \"produces\": [\n    \"application/json\"\n  ],\n  \"paths\": {\n    \"/Ping/ping\": {\n      \"get\": {\n        \"operationId\": \"Pingping_GET_1\",\n        \"parameters\": [\n\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful\",\n            \"schema\": {\n              \"$ref\": \"#/definitions/Pingping_GET_response\"\n            }\n          },\n          \"401\": {\n            \"description\": \"Access Denied\"\n          }\n        }\n      }\n    }\n  },\n  \"definitions\": {\n    \"Pingping_GET_response\": {\n      \"required\": [\n        \"date\",\n        \"message\"\n      ],\n      \"properties\": {\n        \"date\": {\n          \"type\": \"string\"\n        },\n        \"message\": {\n          \"type\": \"string\"\n        }\n      }\n    }\n  }\n}\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-01-09 08:37:41 GMT",
+  "lastModified" : "2020-01-15 13:40:12 GMT",
+  "systemVersion" : 1,
+  "id" : "a72f7917-f52f-419c-b45b-ef49815cd091"
+}

@@ -1,0 +1,14 @@
+{
+  "configId" : "centraSiteDestinationCommunicationConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "hostName" : "wm105",
+    "protocol" : "http",
+    "targetName" : "API-Gateway",
+    "password" : "********************************",
+    "gatewayAssetId" : "uddi:1fed9e90-32ba-11ea-9bfa-d14afe91ac50",
+    "UDDIPort" : "53307",
+    "userName" : "INTERNAL\\apiadmin"
+  }
+}

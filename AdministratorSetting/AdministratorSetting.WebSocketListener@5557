@@ -1,0 +1,26 @@
+{
+  "configId" : "WebSocketListener@5557",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "configURL" : "/WmRoot/configWebSocket.dsp",
+    "maxQueue" : "200",
+    "listenerKey" : "WebSocketListener@5557",
+    "portDescription" : "Integration Server WebSocket port: 5557",
+    "listenerType" : "WebSocket",
+    "maxThread" : "200",
+    "threadPriority" : "5",
+    "pkg" : "WmRoot",
+    "enabled" : "true",
+    "minThread" : "10",
+    "protocol" : "WebSocket",
+    "port" : 5557,
+    "factoryKey" : "webMethods/WebSocket",
+    "provider" : "webMethods",
+    "idleTimeout" : "300000",
+    "portAlias" : "WebSocket",
+    "key" : "WebSocketListener@5557",
+    "uniqueID" : "98849e0da10c42e8af83ea891ce498f3",
+    "clientAuth" : "basic"
+  }
+}

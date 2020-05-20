@@ -1,0 +1,32 @@
+{
+  "id" : "12922f1c-f1ad-4353-ad48-2bd8fef6a2c7",
+  "type" : "OAUTH2",
+  "authServerAlias" : "local",
+  "name" : "PingGW_API_App2da8c002-9336-4811-8113-c913532ebf16-$sys-default-oauth",
+  "clientId" : "fdc05107-429c-419b-9ee3-e670aa675303",
+  "dcrConfig" : {
+    "allowedGrantTypes" : [ "implicit", "client_credentials", "authorization_code" ],
+    "clientType" : "CONFIDENTIAL",
+    "clientName" : "PingGW_API_App2da8c002-9336-4811-8113-c913532ebf16-$sys-default-oauth",
+    "clientVersion" : "1.0",
+    "expirationInterval" : "3600",
+    "scopes" : [ ],
+    "redirectUris" : [ "https://wm105:18102/abs/apiportalext/v1/oauth2/callback" ]
+  },
+  "clientRegistration" : {
+    "clientId" : "fdc05107-429c-419b-9ee3-e670aa675303",
+    "name" : "PingGW_API_App2da8c002-9336-4811-8113-c913532ebf16-$sys-default-oauth",
+    "version" : "1.0",
+    "type" : "confidential",
+    "tokenLifetime" : 3600,
+    "tokenRefreshLimit" : 0,
+    "clientSecret" : "********************************",
+    "enabled" : true,
+    "redirectUris" : [ "https://wm105:18102/abs/apiportalext/v1/oauth2/callback" ],
+    "clScopes" : [ ],
+    "authCodeAllowed" : true,
+    "implicitAllowed" : true,
+    "clientCredentialsAllowed" : true,
+    "resourceOwnerAllowed" : false
+  }
+}

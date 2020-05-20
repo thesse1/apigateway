@@ -1,0 +1,29 @@
+{
+  "applicationID" : "157e6887-38f3-4645-9a3d-3fa869e44469",
+  "name" : "PingGW_API_App",
+  "description" : "",
+  "owner" : "default:34bac9b8-366a-3a8e-b116-cd93863d3530",
+  "identifiers" : [ {
+    "id" : "898099e8-b1d2-44df-808d-c4c95925d1a1",
+    "key" : "jwtClaims",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "JWT default claims set",
+      "values" : [ "{\"app_id\":\"157e6887-38f3-4645-9a3d-3fa869e44469\"}" ]
+    } ]
+  } ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "0fa90bd5ec794cbd1321ead4606e4a4fba60035fcae6b707c2671836358292ee"
+    }
+  },
+  "creationDate" : "2020-01-15 13:42:26 GMT",
+  "lastUpdated" : 1579095746318,
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "isSuspended" : false,
+  "authStrategyIds" : [ "12922f1c-f1ad-4353-ad48-2bd8fef6a2c7" ],
+  "subscription" : false
+}

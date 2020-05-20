@@ -1,0 +1,13 @@
+{
+  "id" : "12597553-65b2-4a22-a736-7c571474d041",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "ws://echo.websocket.org" ]
+  } ],
+  "active" : false
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "e303c06c-4379-4b01-b477-21db3001198c",
+  "names" : [ {
+    "value" : "Default Policy for API WebSocketDemo",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "12597553-65b2-4a22-a736-7c571474d041",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "6393c042-5660-4a20-b9cc-78f2b4d53682",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "systemPolicy" : false,
+  "global" : false
+}

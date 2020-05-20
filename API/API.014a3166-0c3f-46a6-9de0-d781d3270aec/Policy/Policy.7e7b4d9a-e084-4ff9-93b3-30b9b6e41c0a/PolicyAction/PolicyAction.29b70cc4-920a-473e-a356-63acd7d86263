@@ -1,0 +1,46 @@
+{
+  "id" : "29b70cc4-920a-473e-a356-63acd7d86263",
+  "names" : [ {
+    "value" : "Custom Extension",
+    "locale" : "en"
+  } ],
+  "templateKey" : "customPolicy",
+  "parameters" : [ {
+    "templateKey" : "customExtensionType",
+    "values" : [ "externalCallout" ]
+  }, {
+    "templateKey" : "externalEndpoint",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "https://jsonplaceholder.typicode.com/users/1" ]
+    }, {
+      "templateKey" : "externalEndpointMethod",
+      "values" : [ "GET" ]
+    } ]
+  }, {
+    "templateKey" : "mashupHeaderTransformation",
+    "parameters" : [ {
+      "templateKey" : "useIncomingHeaders",
+      "values" : [ "false" ]
+    } ]
+  }, {
+    "templateKey" : "customExtensionResponseProcessing",
+    "parameters" : [ {
+      "templateKey" : "copyEntireResponse",
+      "values" : [ "false" ]
+    }, {
+      "templateKey" : "abortInCaseOfFailure",
+      "values" : [ "false" ]
+    }, {
+      "templateKey" : "responsePayloadMap",
+      "parameters" : [ {
+        "templateKey" : "responseFromCustomPolicyExpression",
+        "values" : [ "${response.payload.jsonPath[$.name]}" ]
+      }, {
+        "templateKey" : "targetPayloadExpression",
+        "values" : [ "${response[customExtension].payload.jsonPath[$.username]}" ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}
