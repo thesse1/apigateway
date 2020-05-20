@@ -302,19 +302,19 @@
           "ShipName" : {
             "enabled" : true
           },
-          "ShippedDate" : {
+          "ShipCity" : {
             "enabled" : true
           },
-          "ShipCity" : {
+          "ShippedDate" : {
             "enabled" : true
           },
           "CustomerID" : {
             "enabled" : true
           },
-          "ShipVia" : {
+          "ShipPostalCode" : {
             "enabled" : true
           },
-          "ShipPostalCode" : {
+          "ShipVia" : {
             "enabled" : true
           },
           "OrderID" : {
@@ -519,19 +519,19 @@
           "ShipName" : {
             "enabled" : true
           },
-          "ShippedDate" : {
+          "ShipCity" : {
             "enabled" : true
           },
-          "ShipCity" : {
+          "ShippedDate" : {
             "enabled" : true
           },
           "CustomerID" : {
             "enabled" : true
           },
-          "ShipVia" : {
+          "ShipPostalCode" : {
             "enabled" : true
           },
-          "ShipPostalCode" : {
+          "ShipVia" : {
             "enabled" : true
           },
           "OrderID" : {
@@ -619,10 +619,10 @@
       },
       "NorthwindModel.Supplier" : {
         "properties" : {
-          "SupplierID" : {
+          "CompanyName" : {
             "enabled" : true
           },
-          "CompanyName" : {
+          "SupplierID" : {
             "enabled" : true
           },
           "HomePage" : {
@@ -634,13 +634,13 @@
           "Phone" : {
             "enabled" : true
           },
-          "Region" : {
+          "Country" : {
             "enabled" : true
           },
           "PostalCode" : {
             "enabled" : true
           },
-          "Country" : {
+          "Region" : {
             "enabled" : true
           },
           "City" : {
@@ -866,25 +866,25 @@
           "Address" : {
             "enabled" : true
           },
-          "ShippedDate" : {
+          "ShipCity" : {
             "enabled" : true
           },
-          "ShipCity" : {
+          "ShippedDate" : {
             "enabled" : true
           },
           "PostalCode" : {
             "enabled" : true
           },
-          "CustomerID" : {
+          "City" : {
             "enabled" : true
           },
-          "ShipVia" : {
+          "CustomerID" : {
             "enabled" : true
           },
           "ShipPostalCode" : {
             "enabled" : true
           },
-          "City" : {
+          "ShipVia" : {
             "enabled" : true
           },
           "OrderID" : {
@@ -899,13 +899,13 @@
           "CompanyName" : {
             "enabled" : true
           },
-          "ShipAddress" : {
+          "Country" : {
             "enabled" : true
           },
           "Region" : {
             "enabled" : true
           },
-          "Country" : {
+          "ShipAddress" : {
             "enabled" : true
           },
           "ShipCountry" : {
@@ -1016,25 +1016,25 @@
           "ProductID" : {
             "enabled" : true
           },
-          "ShipPostalCode" : {
-            "enabled" : true
-          },
           "City" : {
             "enabled" : true
           },
-          "ShipRegion" : {
+          "ShipPostalCode" : {
             "enabled" : true
           },
           "OrderDate" : {
             "enabled" : true
           },
+          "ShipRegion" : {
+            "enabled" : true
+          },
           "UnitPrice" : {
             "enabled" : true
           },
-          "Region" : {
+          "Country" : {
             "enabled" : true
           },
-          "Country" : {
+          "Region" : {
             "enabled" : true
           },
           "ShipCountry" : {
@@ -1174,10 +1174,10 @@
           "FirstName" : {
             "enabled" : true
           },
-          "Title" : {
+          "PostalCode" : {
             "enabled" : true
           },
-          "PostalCode" : {
+          "Title" : {
             "enabled" : true
           },
           "Photo" : {
@@ -1195,7 +1195,7 @@
           "HomePhone" : {
             "enabled" : true
           },
-          "TitleOfCourtesy" : {
+          "Country" : {
             "enabled" : true
           },
           "HireDate" : {
@@ -1204,10 +1204,10 @@
           "Region" : {
             "enabled" : true
           },
-          "Country" : {
+          "ReportsTo" : {
             "enabled" : true
           },
-          "ReportsTo" : {
+          "TitleOfCourtesy" : {
             "enabled" : true
           },
           "LastName" : {
@@ -1388,19 +1388,19 @@
           "Phone" : {
             "enabled" : true
           },
-          "Region" : {
+          "Country" : {
             "enabled" : true
           },
           "PostalCode" : {
             "enabled" : true
           },
-          "Country" : {
-            "enabled" : true
-          },
-          "CustomerID" : {
+          "Region" : {
             "enabled" : true
           },
           "City" : {
+            "enabled" : true
+          },
+          "CustomerID" : {
             "enabled" : true
           },
           "Fax" : {
@@ -1515,12 +1515,12 @@
           }
         },
         "navigationProperties" : {
-          "Region" : {
-            "entityType" : "Collection(NorthwindModel.Region)",
-            "enabled" : true
-          },
           "Employees" : {
             "entityType" : "Collection(NorthwindModel.Employees)",
+            "enabled" : true
+          },
+          "Region" : {
+            "entityType" : "Collection(NorthwindModel.Region)",
             "enabled" : true
           },
           "Region({entity-id})" : {
@@ -1561,10 +1561,10 @@
           "FirstName" : {
             "enabled" : true
           },
-          "Title" : {
+          "PostalCode" : {
             "enabled" : true
           },
-          "PostalCode" : {
+          "Title" : {
             "enabled" : true
           },
           "Photo" : {
@@ -1582,7 +1582,7 @@
           "HomePhone" : {
             "enabled" : true
           },
-          "TitleOfCourtesy" : {
+          "Country" : {
             "enabled" : true
           },
           "HireDate" : {
@@ -1591,10 +1591,10 @@
           "Region" : {
             "enabled" : true
           },
-          "Country" : {
+          "ReportsTo" : {
             "enabled" : true
           },
-          "ReportsTo" : {
+          "TitleOfCourtesy" : {
             "enabled" : true
           },
           "LastName" : {
@@ -1688,13 +1688,13 @@
           "ProductName" : {
             "enabled" : true
           },
+          "CategoryName" : {
+            "enabled" : true
+          },
           "QuantityPerUnit" : {
             "enabled" : true
           },
           "UnitsOnOrder" : {
-            "enabled" : true
-          },
-          "CategoryName" : {
             "enabled" : true
           },
           "ProductID" : {
@@ -1730,10 +1730,10 @@
           "FirstName" : {
             "enabled" : true
           },
-          "Title" : {
+          "PostalCode" : {
             "enabled" : true
           },
-          "PostalCode" : {
+          "Title" : {
             "enabled" : true
           },
           "Photo" : {
@@ -1751,7 +1751,7 @@
           "HomePhone" : {
             "enabled" : true
           },
-          "TitleOfCourtesy" : {
+          "Country" : {
             "enabled" : true
           },
           "HireDate" : {
@@ -1760,10 +1760,10 @@
           "Region" : {
             "enabled" : true
           },
-          "Country" : {
+          "ReportsTo" : {
             "enabled" : true
           },
-          "ReportsTo" : {
+          "TitleOfCourtesy" : {
             "enabled" : true
           },
           "LastName" : {
@@ -2186,10 +2186,10 @@
           "FirstName" : {
             "enabled" : true
           },
-          "Title" : {
+          "PostalCode" : {
             "enabled" : true
           },
-          "PostalCode" : {
+          "Title" : {
             "enabled" : true
           },
           "Photo" : {
@@ -2207,7 +2207,7 @@
           "HomePhone" : {
             "enabled" : true
           },
-          "TitleOfCourtesy" : {
+          "Country" : {
             "enabled" : true
           },
           "HireDate" : {
@@ -2216,10 +2216,10 @@
           "Region" : {
             "enabled" : true
           },
-          "Country" : {
+          "ReportsTo" : {
             "enabled" : true
           },
-          "ReportsTo" : {
+          "TitleOfCourtesy" : {
             "enabled" : true
           },
           "LastName" : {
@@ -2319,12 +2319,12 @@
           }
         },
         "navigationProperties" : {
-          "Region" : {
-            "entityType" : "Collection(NorthwindModel.Region)",
-            "enabled" : true
-          },
           "Employees" : {
             "entityType" : "Collection(NorthwindModel.Employees)",
+            "enabled" : true
+          },
+          "Region" : {
+            "entityType" : "Collection(NorthwindModel.Region)",
             "enabled" : true
           },
           "Region({entity-id})" : {
@@ -2509,19 +2509,19 @@
           "Phone" : {
             "enabled" : true
           },
-          "Region" : {
+          "Country" : {
             "enabled" : true
           },
           "PostalCode" : {
             "enabled" : true
           },
-          "Country" : {
-            "enabled" : true
-          },
-          "CustomerID" : {
+          "Region" : {
             "enabled" : true
           },
           "City" : {
+            "enabled" : true
+          },
+          "CustomerID" : {
             "enabled" : true
           },
           "Fax" : {
@@ -2644,10 +2644,10 @@
           "Discount" : {
             "enabled" : true
           },
-          "ProductName" : {
+          "ExtendedPrice" : {
             "enabled" : true
           },
-          "ExtendedPrice" : {
+          "ProductName" : {
             "enabled" : true
           },
           "Quantity" : {
@@ -2685,7 +2685,8 @@
           }
         }
       }
-    }
+    },
+    "serviceRegistryDisplayName" : "Northwind.svc_1"
   },
   "nativeEndpoint" : [ {
     "passSecurityHeaders" : true,
@@ -2695,6 +2696,7 @@
   } ],
   "apiName" : "Northwind.svc",
   "apiVersion" : "1",
+  "apiDescription" : "Microsoft demo",
   "maturityState" : "Beta",
   "isActive" : true,
   "type" : "ODATA",
@@ -2703,6 +2705,7 @@
   "scopes" : [ ],
   "publishedPortals" : [ ],
   "creationDate" : "2020-05-20 07:37:57 GMT",
+  "lastModified" : "2020-05-20 18:18:45 GMT",
   "systemVersion" : 1,
   "id" : "cfa3a737-449e-4367-bbd2-7904045a1967"
 }
